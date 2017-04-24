@@ -1,0 +1,22 @@
+//Importabt string functions
+public static int appearanceCount(int input1,int input2,String input3,String input4)  
+  {	  
+	 int i,count=0;
+	 String sub=new String();
+	 char[] ar = input3.toCharArray();  //To convert String into char array
+   Arrays.sort(ar);                   //To sort char array      
+	 input3 = String.valueOf(ar);       //to covert char array into string
+	 System.out.println("input3 sorted: "+input3);
+	 for(i=0;i<(input2-input1+1);i++)
+	 {
+     //sub = Arrays.copyOfRange(input4, i, i+input1-1);
+	   sub=input4.substring(i,i+input1);  //to create subarray out of array
+	   ar = sub.toCharArray();
+     Arrays.sort(ar);
+     sub = String.valueOf(ar);
+     System.out.println("sub sorted: "+sub);
+	   if(input3.equals(sub))
+	   count++;
+	  }
+	return count;
+  }
