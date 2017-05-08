@@ -1,0 +1,6 @@
+To assign value to all the members of an array
+int[] array = new int[4];
+Arrays.fill(array, 0);
+
+Square root
+Math.sqrt(x)
